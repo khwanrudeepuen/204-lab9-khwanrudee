@@ -7,20 +7,20 @@ public class MagnusEffect : MonoBehaviour
     
     void Start()
     {
-        rb.GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
     }
 
     
-    void Update()
+    void Update()                 
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            kick();
+            Kick();
         }
         ApplyMagnusEffect();
     }
 
-    void kick()
+    void Kick()
     {
         rb.linearVelocity = velocity;
         rb.angularVelocity = spin;
